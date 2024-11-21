@@ -25,16 +25,22 @@ public class Task1 {
             return "Некорректный ввод";
         }
 
-        String str = String.valueOf(age);
-        if (str.equals("11") || str.equals("12") || str.equals("13") || str.equals("14")) {
+        int lastTwoDigits = age % 100;
+        int lastDigit = age % 10;
+
+        if (lastTwoDigits >= 11 && lastTwoDigits <= 14) {
             return "Вам " + age + " лет";
         }
 
-        if (str.endsWith("1")) {
-            return "Вам " + age + " год";
-        } else if (str.endsWith("2") || str.endsWith("3") || str.endsWith("4")) {
+        if (lastDigit >= 2 && lastDigit <= 4) {
             return "Вам " + age + " года";
         }
+
+        if (lastDigit == 1) {
+            return "Вам " + age + " год";
+        }
+
         return "Вам " + age + " лет";
+
     }
 }
