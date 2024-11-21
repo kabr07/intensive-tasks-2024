@@ -26,7 +26,7 @@ public class Task1 {
         }
 
         String str = String.valueOf(age);
-        if(str.equals("11") || str.equals("12") || str.equals("13") || str.equals("14")){
+        if (str.equals("11") || str.equals("12") || str.equals("13") || str.equals("14")) {
             return "Вам " + age + " лет";
         }
 
